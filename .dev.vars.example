@@ -1,0 +1,2 @@
+EMAIL="example@example.com"
+PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...EXAMPLE...\n-----END PRIVATE KEY-----\n"

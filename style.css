@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('/Inter.woff2');
+}
+
+:root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  background: hsl(224deg 80% 95%);
+  color: hsl(54deg 90% 10%);
+  box-sizing: border-box;
+}
+
+:root * {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-block-size: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 16px;
+  border-block-end: 1px solid hsl(0deg 0% 85%);
+  margin-block-end: 16px;
+}
+
+footer {
+  padding: 16px;
+  border-block-start: 1px solid hsl(0deg 0% 85%);
+  margin-block-start: 16px;
+}
+
+.header-content,
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1.title {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+p.subtitle {
+  margin-block: 8px;
+  color: hsl(55deg 5% 45%);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  h1.title {
+    font-size: 2rem;
+  }
+
+  p.subtitle {
+    font-size: 1rem;
+  }
+}
+
+.github-link {
+  color: inherit;
+  inline-size: 24px;
+  transition: transform 600ms;
+}
+
+.github-link:hover,
+.github-link:focus-within {
+  transform: translateY(-3px);
+  transition: transform 200ms;
+}
+
+.spacer {
+  flex: 1;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  inline-size: min(100% - 32px, 1440px);
+  margin-inline: auto;
+}
+
+form,
+.feed {
+  flex: 1;
+  min-inline-size: min(100% - 32px, 480px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section-header {
+  margin: 0;
+  text-align: center;
+  align-self: center;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: hsl(0deg 0% 40%);
+}
+
+input,
+textarea {
+  inline-size: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid hsl(0deg 0% 80%);
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid hsl(224deg 80% 50%);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  inline-size: fit-content;
+  color: hsl(0deg 0% 95%);
+  font-size: 16px;
+  font-weight: 600;
+  padding-inline: 16px;
+  padding-block: 8px;
+  border-radius: 4px;
+  border: 1px solid hsl(224deg 80% 45%);
+  background: hsl(224deg 80% 40%);
+  cursor: pointer;
+  transition: filter 600ms;
+}
+
+button:hover {
+  filter: brightness(120%);
+  transition: filter 200ms;
+}
+
+.warning {
+  margin: 0;
+  color: hsl(0deg 0% 50%);
+}
+
+.feed-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  max-block-size: calc(100dvh - 253px);
+}
