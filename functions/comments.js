@@ -60,10 +60,15 @@ async function getGoogleAuthToken(clientEmail, privateKey, scopes) {
 }
 
 export async function onRequestGet({ env }) {
-  const sheetId = '1iiIolIwByFYo3ufmVWMpiGpjMlXA3e-qXI3-XFVedSQ';
-  const range = 'A2:C';
-  const requestUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}`;
-  const token = await getGoogleAuthToken(env.EMAIL, env.PRIVATE_KEY, 'https://www.googleapis.com/auth/spreadsheets.readonly');
+  try {
+    const sheetId = '1iiIolIwByFYo3ufmVWMpiGpjMlXA3e-qXI3-XFVedSQ';
+    const range = 'A2:C';
+    const requestUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}`;
+    const token = await getGoogleAuthToken(env.EMAIL, env.PRIVATE_KEY, 'https://www.googleapis.com/auth/spreadsheets.readonly');
 
-  return fetch(requestUrl, { headers: { Authorization: `Bearer ${token}` } });
+    return fetch(requestUrl, { headers: { Authorization: `Bearer ${token}` } });
+  }
+  catch (error) {
+    return new Response(error);
+  }
 }
