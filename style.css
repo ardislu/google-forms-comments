@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   background: hsl(224deg 80% 95%);
   color: hsl(54deg 90% 10%);
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 
 @supports (font-variation-settings: normal) {
   :root {
-    font-family: 'Inter var', sans-serif;
+    font-family: 'Inter var', system-ui, sans-serif;
   }
 }
 
