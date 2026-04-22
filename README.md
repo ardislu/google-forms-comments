@@ -2,6 +2,11 @@
 
 A simple comment system that uses Google Forms and Google Sheets as its backend.
 
+Code repository mirrors:
+[GitHub](https://github.com/ardislu/google-forms-comments),
+[Codeberg](https://codeberg.org/ardislu/google-forms-comments),
+[git.ardis.lu](https://git.ardis.lu/google-forms-comments)
+
 ## Creating comments
 
 To create new comments, the frontend directly `POST`s to the Google Form. Since
